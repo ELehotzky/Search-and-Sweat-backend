@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 			resources :fitness_classes
 			resources :admins
 			resources :studios
+			resources :fitness_class_details
 		end
 	end
 

@@ -6945,3 +6945,1484 @@ No serializer found for resource: #<Admin id: 2, name: "Admin", email: "Lehotzky
 Completed 200 OK in 29ms (Views: 17.1ms | ActiveRecord: 6.5ms)
 
 
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-11 17:42:04 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<Admin id: 2, name: "Admin", email: "Lehotzky.Erica@gmail.com", password: "pass1234", created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Admin::ActiveRecord_Relation (0.64ms)
+Completed 200 OK in 36ms (Views: 23.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/v1/studios" for 127.0.0.1 at 2018-10-11 17:42:08 -0500
+Processing by Api::V1::StudiosController#index as HTML
+  [1m[36mStudio Load (1.1ms)[0m  [1m[34mSELECT "studios".* FROM "studios"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<Studio id: 6, name: "Body Rock Pilates - Rice Military", street_address: "5230 Center St", city: "Houston", zip_code: 77007, phone: "346-319-5975", image: nil, website: "http://www.http://bodyrockpilates.com/", hours: nil, promos: nil, admin_id: 2, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Studio::ActiveRecord_Relation (1.72ms)
+Completed 200 OK in 44ms (Views: 27.1ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:22:04 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/erica/.rvm/rubies/ruby-2.3.7/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/erica/.rvm/rubies/ruby-2.3.7/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-12 13:22:12 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (6.7ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.77ms)
+Completed 200 OK in 72ms (Views: 28.0ms | ActiveRecord: 29.4ms)
+
+
+Started GET "/api/v1/studios" for 127.0.0.1 at 2018-10-12 14:33:33 -0500
+Processing by Api::V1::StudiosController#index as HTML
+  [1m[36mStudio Load (1.0ms)[0m  [1m[34mSELECT "studios".* FROM "studios"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<Studio id: 6, name: "Body Rock Pilates - Rice Military", street_address: "5230 Center St", city: "Houston", zip_code: 77007, phone: "346-319-5975", image: nil, website: "http://www.http://bodyrockpilates.com/", hours: nil, promos: nil, admin_id: 2, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Studio::ActiveRecord_Relation (1.23ms)
+Completed 200 OK in 36ms (Views: 23.6ms | ActiveRecord: 8.4ms)
+
+
+  [1m[36mAdmin Load (2.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" ORDER BY "fitness_classes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFitnessClassDetail Load (0.5ms)[0m  [1m[34mSELECT  "fitness_class_details".* FROM "fitness_class_details" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/events" for 127.0.0.1 at 2018-10-15 11:27:28 -0500
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+  
+ActionController::RoutingError (No route matches [GET] "/events"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 11:27:36 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (25.2ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (1.17ms)
+Completed 200 OK in 81ms (Views: 26.8ms | ActiveRecord: 42.8ms)
+
+
+Started GET "/api/v1/fitness_class_details" for 127.0.0.1 at 2018-10-15 11:27:44 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/fitness_class_details"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-15 13:56:21 -0500
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/erica/.rvm/rubies/ruby-2.3.7/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/erica/.rvm/rubies/ruby-2.3.7/lib/ruby/gems/2.3.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 13:56:27 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (1.0ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.99ms)
+Completed 200 OK in 54ms (Views: 29.6ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/api/v1/fitness_class_details" for 127.0.0.1 at 2018-10-15 14:01:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/fitness_class_details"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 14:50:13 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.1ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.59ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 14:50:54 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.7ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.52ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 14:52:28 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.67ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 14:52:45 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.39ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:02:51 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.3ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.59ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:06:10 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.6ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.59ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:06:22 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.53ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:06:58 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.51ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:07:05 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.56ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:07:10 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.33ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:07:23 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.36ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:07:58 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.48ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:08:41 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.49ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:08:58 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.54ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:09:11 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.51ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:09:27 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.68ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:09:39 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.56ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:09:44 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.54ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:10:33 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.57ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:19:09 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.2ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.47ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:19:13 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.7ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.52ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:25:55 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.2ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.46ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:25:59 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.85ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:26:01 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.66ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:26:07 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.81ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:26:12 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.48ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:26:38 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.41ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:27:31 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.55ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:27:42 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.0ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.84ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:27:53 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.46ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:28:34 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.76ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:32:36 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.7ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.65ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:33:12 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.88ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:33:30 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.54ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 15:37:05 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.8ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.72ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/fitness_class_details" for 127.0.0.1 at 2018-10-15 15:37:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/fitness_class_details"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/fitness_class_details" for 127.0.0.1 at 2018-10-15 15:39:02 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::FitnessClassDetailsController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/fitness_class_details" for 127.0.0.1 at 2018-10-15 15:39:53 -0500
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/controllers/api/v1/fitness_class_details_controller.rb:7: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/api/v1/fitness_class_details_controller.rb:7: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/api/v1/fitness_class_details" for 127.0.0.1 at 2018-10-15 15:39:53 -0500
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/controllers/api/v1/fitness_class_details_controller.rb:7: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/api/v1/fitness_class_details_controller.rb:7: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/api/v1/fitness_class_details" for 127.0.0.1 at 2018-10-15 15:40:10 -0500
+  [1m[36mFitnessClassDetail Load (0.9ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::FitnessClassDetailsController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/fitness_class_details" for 127.0.0.1 at 2018-10-15 15:40:29 -0500
+Processing by Api::V1::FitnessClassDetailsController#index as HTML
+  [1m[36mFitnessClassDetail Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 16:38:57 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (2.1ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.78ms)
+Completed 200 OK in 60ms (Views: 34.0ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 16:39:29 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.9ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.6ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 16:40:13 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.58ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 16:40:42 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.45ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFitnessClass Load (0.9ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:28:22 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.0ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.47ms)
+Completed 200 OK in 34ms (Views: 17.7ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:28:34 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.61ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:30:10 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+No serializer found for resource: #<FitnessClass id: 3, name: "Reformer", description: "More than just your standard pilates class, our Re...", image: nil, class_length: 50, price: 30, studio_id: 6, created_at: "2018-10-11 20:40:08", updated_at: "2018-10-11 20:40:08">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with FitnessClass::ActiveRecord_Relation (0.65ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:30:22 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.7ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (12.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (53.64ms)
+Completed 200 OK in 95ms (Views: 64.1ms | ActiveRecord: 24.7ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:30:40 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.7ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.5ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.5ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (35.6ms)
+Completed 200 OK in 75ms (Views: 49.8ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:35:02 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (1.0ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 11.9ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+					type: name.name
+					     ^):
+  
+app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:35:51 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 6.2ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+					type: type.name
+					     ^):
+  
+app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:36:13 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.5ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.21ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 11.4ms)
+
+
+  
+NoMethodError (undefined method `categories' for #<FitnessClassCategory:0x00007ffe451b6318>
+Did you mean?  category
+               category_id
+               category_id_was
+               category=):
+  
+app/serializers/fitness_class_serializer.rb:14:in `block in fitness_class_categories'
+app/serializers/fitness_class_serializer.rb:12:in `map'
+app/serializers/fitness_class_serializer.rb:12:in `fitness_class_categories'
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:36:30 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.25ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 10.4ms)
+
+
+  
+NoMethodError (undefined method `map' for 16:Fixnum
+Did you mean?  tap):
+  
+app/serializers/fitness_class_serializer.rb:14:in `block in fitness_class_categories'
+app/serializers/fitness_class_serializer.rb:12:in `map'
+app/serializers/fitness_class_serializer.rb:12:in `fitness_class_categories'
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:36:38 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (20.49ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 11.4ms)
+
+
+  
+NoMethodError (undefined method `categories' for #<FitnessClassCategory:0x00007ffe454966c8>
+Did you mean?  category
+               category_id
+               category_id_was
+               category=):
+  
+app/serializers/fitness_class_serializer.rb:14:in `block in fitness_class_categories'
+app/serializers/fitness_class_serializer.rb:12:in `map'
+app/serializers/fitness_class_serializer.rb:12:in `fitness_class_categories'
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:38:22 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 5.3ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:20: syntax error, unexpected '}', expecting keyword_end):
+  
+app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+app/serializers/fitness_class_serializer.rb:20: syntax error, unexpected '}', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:38:27 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:20: syntax error, unexpected '}', expecting keyword_end):
+  
+app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+app/serializers/fitness_class_serializer.rb:20: syntax error, unexpected '}', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:39:06 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 4.9ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected '\n', expecting =>):
+  
+app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:39:42 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 5.5ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:13: syntax error, unexpected '\n', expecting =>):
+  
+app/serializers/fitness_class_serializer.rb:13: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:39:44 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:13: syntax error, unexpected '\n', expecting =>):
+  
+app/serializers/fitness_class_serializer.rb:13: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:40:28 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers]   [1m[36mCategory Load (6.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ (byebug):1
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (129241.3ms)
+Completed 500 Internal Server Error in 129263ms (ActiveRecord: 19.9ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block in fitness_class_categories'
+app/serializers/fitness_class_serializer.rb:19:in `block in fitness_class_categories'
+app/serializers/fitness_class_serializer.rb:12:in `map'
+app/serializers/fitness_class_serializer.rb:12:in `fitness_class_categories'
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:42:47 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (1.2ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (1.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers]   [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (1.4ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (1.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (1.1ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (427.5ms)
+Completed 200 OK in 692ms (Views: 566.7ms | ActiveRecord: 34.3ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:43:46 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (1.6ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (1.5ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers]   [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (1.4ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (2.0ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (1.7ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (176.28ms)
+Completed 200 OK in 210ms (Views: 197.2ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:45:17 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (1.1ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 8.2ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected ':', expecting keyword_end
+					type: type.name
+					     ^
+/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected '\n', expecting =>):
+  
+app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:45:40 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (1.7ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 11.7ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:16: syntax error, unexpected '\n', expecting =>):
+  
+app/serializers/fitness_class_serializer.rb:16: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:46:13 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.9ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 8.8ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:13: syntax error, unexpected '\n', expecting =>
+/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:18: syntax error, unexpected '}', expecting keyword_end):
+  
+app/serializers/fitness_class_serializer.rb:13: syntax error, unexpected '\n', expecting =>
+app/serializers/fitness_class_serializer.rb:18: syntax error, unexpected '}', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:46:41 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (1.0ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 9.4ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+					type: type.name
+					     ^):
+  
+app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:47:10 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 7.3ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+					name: type.name
+					     ^):
+  
+app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:47:15 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+					name: type.name
+					     ^):
+  
+app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:47:38 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 6.6ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+					name: class_type.name
+					     ^):
+  
+app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:48:05 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 6.3ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+					name: class_type.name
+					     ^):
+  
+app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:48:13 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+					name: class_type.name
+					     ^):
+  
+app/serializers/fitness_class_serializer.rb:15: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:48:30 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.6ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12125.83ms)
+Completed 500 Internal Server Error in 12156ms (ActiveRecord: 12.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block in fitness_class_categories'
+app/serializers/fitness_class_serializer.rb:17:in `block in fitness_class_categories'
+app/serializers/fitness_class_serializer.rb:12:in `map'
+app/serializers/fitness_class_serializer.rb:12:in `fitness_class_categories'
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:49:05 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.8ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.6ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ (byebug):1
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (38828.62ms)
+Completed 200 OK in 38861ms (Views: 38836.2ms | ActiveRecord: 18.5ms)
+
+
+  [1m[36mFitnessClassCategory Load (0.5ms)[0m  [1m[34mSELECT  "fitness_class_categories".* FROM "fitness_class_categories" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mFitnessClassCategory Load (0.8ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories"[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mFitnessClassCategory Destroy (3.8ms)[0m  [1m[31mDELETE FROM "fitness_class_categories" WHERE "fitness_class_categories"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:5
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[36mFitnessClassDetail Load (0.6ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details"[0m
+  ↳ db/seeds.rb:6
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mFitnessClass Destroy (3.0ms)[0m  [1m[31mDELETE FROM "fitness_classes" WHERE "fitness_classes"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mFitnessClass Destroy (0.7ms)[0m  [1m[31mDELETE FROM "fitness_classes" WHERE "fitness_classes"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[36mClassDetail Load (0.5ms)[0m  [1m[34mSELECT "class_details".* FROM "class_details"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mStudio Load (0.9ms)[0m  [1m[34mSELECT "studios".* FROM "studios"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mStudio Destroy (0.7ms)[0m  [1m[31mDELETE FROM "studios" WHERE "studios"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mStudio Destroy (0.6ms)[0m  [1m[31mDELETE FROM "studios" WHERE "studios"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mStudio Destroy (0.5ms)[0m  [1m[31mDELETE FROM "studios" WHERE "studios"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mStudio Destroy (0.6ms)[0m  [1m[31mDELETE FROM "studios" WHERE "studios"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mStudio Destroy (0.6ms)[0m  [1m[31mDELETE FROM "studios" WHERE "studios"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAdmin Destroy (6.7ms)[0m  [1m[31mDELETE FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:11
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.7ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.6ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (1.5ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mAdmin Create (2.6ms)[0m  [1m[32mINSERT INTO "admins" ("name", "email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Admin"], ["email", "Lehotzky.Erica@gmail.com"], ["password", "pass1234"], ["created_at", "2018-10-15 22:50:38.504168"], ["updated_at", "2018-10-15 22:50:38.504168"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mStudio Create (0.9ms)[0m  [1m[32mINSERT INTO "studios" ("name", "street_address", "city", "zip_code", "phone", "website", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Body Rock Pilates - Rice Military"], ["street_address", "5230 Center St"], ["city", "Houston"], ["zip_code", 77007], ["phone", "346-319-5975"], ["website", "http://www.http://bodyrockpilates.com/"], ["admin_id", 3], ["created_at", "2018-10-15 22:50:38.512241"], ["updated_at", "2018-10-15 22:50:38.512241"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mStudio Create (0.5ms)[0m  [1m[32mINSERT INTO "studios" ("name", "street_address", "city", "zip_code", "phone", "website", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Urban Jungle Self Defense"], ["street_address", "707 Yale St"], ["city", "Houston"], ["zip_code", 77007], ["phone", "713-861-7252"], ["website", "https://www.urbanjungleselfdefense.com/"], ["admin_id", 3], ["created_at", "2018-10-15 22:50:38.516159"], ["updated_at", "2018-10-15 22:50:38.516159"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mStudio Create (0.4ms)[0m  [1m[32mINSERT INTO "studios" ("name", "street_address", "city", "zip_code", "phone", "website", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Studio Fitness EADO"], ["street_address", "1005 Ennis"], ["city", "Houston"], ["zip_code", 77003], ["phone", "346-204-4865"], ["website", "https://www.studiofitness.org/eado/"], ["admin_id", 3], ["created_at", "2018-10-15 22:50:38.518748"], ["updated_at", "2018-10-15 22:50:38.518748"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mStudio Create (0.5ms)[0m  [1m[32mINSERT INTO "studios" ("name", "street_address", "city", "zip_code", "phone", "website", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "ROW Studios"], ["street_address", "5570 Weslayan St"], ["city", "Houston"], ["zip_code", 77005], ["phone", "713-515-8553"], ["website", "https://www.rowstudios.com/"], ["admin_id", 3], ["created_at", "2018-10-15 22:50:38.521413"], ["updated_at", "2018-10-15 22:50:38.521413"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mStudio Create (0.5ms)[0m  [1m[32mINSERT INTO "studios" ("name", "street_address", "city", "zip_code", "phone", "website", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ryde - River Oaks"], ["street_address", "2005-D West Gray"], ["city", "Houston"], ["zip_code", 77019], ["phone", "832-581-2878"], ["website", "http://www.letsryde.com/"], ["admin_id", 3], ["created_at", "2018-10-15 22:50:38.524208"], ["updated_at", "2018-10-15 22:50:38.524208"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cardio"], ["created_at", "2018-10-15 22:50:38.526891"], ["updated_at", "2018-10-15 22:50:38.526891"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Spin"], ["created_at", "2018-10-15 22:50:38.529559"], ["updated_at", "2018-10-15 22:50:38.529559"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Circuit Training"], ["created_at", "2018-10-15 22:50:38.532267"], ["updated_at", "2018-10-15 22:50:38.532267"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kickboxing"], ["created_at", "2018-10-15 22:50:38.534663"], ["updated_at", "2018-10-15 22:50:38.534663"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yoga"], ["created_at", "2018-10-15 22:50:38.537325"], ["updated_at", "2018-10-15 22:50:38.537325"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pilates"], ["created_at", "2018-10-15 22:50:38.539735"], ["updated_at", "2018-10-15 22:50:38.539735"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boxing"], ["created_at", "2018-10-15 22:50:38.542120"], ["updated_at", "2018-10-15 22:50:38.542120"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rowing"], ["created_at", "2018-10-15 22:50:38.544620"], ["updated_at", "2018-10-15 22:50:38.544620"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Barre"], ["created_at", "2018-10-15 22:50:38.546922"], ["updated_at", "2018-10-15 22:50:38.546922"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Strength Training"], ["created_at", "2018-10-15 22:50:38.549511"], ["updated_at", "2018-10-15 22:50:38.549511"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mFitnessClass Create (1.6ms)[0m  [1m[32mINSERT INTO "fitness_classes" ("name", "description", "class_length", "price", "studio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Reformer"], ["description", "More than just your standard pilates class, our Reformer sessions will take your body to a new level. Traditional Pilates form is coupled with high-intensity exercises that will lengthen, define and reshape your muscles. Add fun, pumping music, custom-made Reformers and our knowledgeable team of instructors-- Let the addiction begin!"], ["class_length", 50], ["price", 30], ["studio_id", 11], ["created_at", "2018-10-15 22:50:38.557125"], ["updated_at", "2018-10-15 22:50:38.557125"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mFitnessClass Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_classes" ("name", "description", "class_length", "price", "studio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Facet Seven Method"], ["description", "The Facet Seven Method class takes the best training models in the fitness industry and combines it into an easy-to-follow, 1-hour program combining Strength, Interval Training, and Yoga. With an emphasis on injury free progress, we tailor the program to match you where you're at on your journey. Each class is designed to build throughout the year for those that are committed, while still providing such a well rounded program that even a quick drop in can provide great benefits. Check us out next to the turf at Studio Fitness."], ["class_length", 60], ["price", 15], ["studio_id", 13], ["created_at", "2018-10-15 22:50:38.562610"], ["updated_at", "2018-10-15 22:50:38.562610"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mFitnessClassCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 5], ["category_id", 26], ["created_at", "2018-10-15 22:50:38.570547"], ["updated_at", "2018-10-15 22:50:38.570547"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:44
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ db/seeds.rb:44
+  [1m[36mFitnessClassCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 6], ["category_id", 30], ["created_at", "2018-10-15 22:50:38.575418"], ["updated_at", "2018-10-15 22:50:38.575418"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:45
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:45
+  [1m[36mFitnessClassCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 6], ["category_id", 26], ["created_at", "2018-10-15 22:50:38.579923"], ["updated_at", "2018-10-15 22:50:38.579923"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:46
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[36mFitnessClassCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 6], ["category_id", 25], ["created_at", "2018-10-15 22:50:38.584951"], ["updated_at", "2018-10-15 22:50:38.584951"]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mClassDetail Create (0.8ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Allison"], ["time", "2018-10-12 06:00:00"], ["created_at", "2018-10-15 22:50:38.597779"], ["updated_at", "2018-10-15 22:50:38.597779"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mClassDetail Create (3.4ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Allison"], ["time", "2018-10-12 08:00:00"], ["created_at", "2018-10-15 22:50:38.613870"], ["updated_at", "2018-10-15 22:50:38.613870"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mClassDetail Create (0.4ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Allison"], ["time", "2018-10-12 09:00:00"], ["created_at", "2018-10-15 22:50:38.625277"], ["updated_at", "2018-10-15 22:50:38.625277"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mClassDetail Create (0.3ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Kristin"], ["time", "2018-10-12 11:00:00"], ["created_at", "2018-10-15 22:50:38.628137"], ["updated_at", "2018-10-15 22:50:38.628137"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mClassDetail Create (0.3ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Kristin"], ["time", "2018-10-12 12:00:00"], ["created_at", "2018-10-15 22:50:38.630905"], ["updated_at", "2018-10-15 22:50:38.630905"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[35m (5.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:57
+  [1m[36mFitnessClassCategory Load (0.6ms)[0m  [1m[34mSELECT  "fitness_class_categories".* FROM "fitness_class_categories" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:51:31 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (1.0ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 9.7ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected ':', expecting keyword_end
+				type: category.category.name
+				     ^):
+  
+app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:52:09 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 4.9ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected ':', expecting keyword_end
+				category_name: category.category.name
+				              ^):
+  
+app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:52:18 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 5.4ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected ':', expecting keyword_end
+				categoryName: category.category.name
+				             ^):
+  
+app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:52:23 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 5.9ms)
+
+
+  
+SyntaxError (/Users/erica/dev/Search-and-Sweat/Search-and-Sweat-backend/app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected ':', expecting keyword_end
+				categoryName: category.category.name
+				             ^):
+  
+app/serializers/fitness_class_serializer.rb:14: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/v1/fitness_classes_controller.rb:5:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-15 17:52:43 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 5]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers]   [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 6]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:12
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 5]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 6]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model_serializers/serializable_resource.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.87ms)
+Completed 200 OK in 53ms (Views: 31.0ms | ActiveRecord: 17.6ms)
+
+

@@ -41,7 +41,6 @@ facet_seven_method = FitnessClass.create(name: "Facet Seven Method", description
 
 #Fitness Class Categories
 fc1 = FitnessClassCategory.create(fitness_class_id: reformer.id, category_id: pilates.id)
-byebug
 fc2 = FitnessClassCategory.create(fitness_class_id: facet_seven_method.id, category_id: strength_training.id)
 fc3 = FitnessClassCategory.create(fitness_class_id: facet_seven_method.id, category_id: pilates.id)
 fc4 = FitnessClassCategory.create(fitness_class_id: facet_seven_method.id, category_id: yoga.id)
