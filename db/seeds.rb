@@ -1,11 +1,8 @@
 require "byebug"
 
-
-
 FitnessClassCategory.destroy_all
 FitnessClassDetail.destroy_all
 FitnessClass.destroy_all
-
 ClassDetail.destroy_all
 Studio.destroy_all
 Admin.destroy_all
@@ -54,4 +51,10 @@ cd4 = ClassDetail.create(instructor: "Kristin", time: DateTime.strptime("10/12/2
 cd5 = ClassDetail.create(instructor: "Kristin", time: DateTime.strptime("10/12/2018 12:00", "%m/%d/%Y %H:%M"))
 
 #Fitness Class Details
-FitnessClassDetail.create(fitness_class_id: fc1.id, class_detail_id: cd1.id)
+FitnessClassDetail.create(fitness_class_id: reformer.id, class_detail_id: cd1.id)
+FitnessClassDetail.create(fitness_class_id: reformer.id, class_detail_id: cd2.id)
+FitnessClassDetail.create(fitness_class_id: reformer.id, class_detail_id: cd3.id)
+
+
+
+
