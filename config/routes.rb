@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 	namespace :api do
 		namespace :v1 do 
 			resources :fitness_classes
-			resources :admins
+			resources :admins, only: [:create]
+				post "/login", to: "auth#create"
+				get "/profile", to: "admins#profile"
 			resources :studios
 			resources :fitness_class_details
 		end

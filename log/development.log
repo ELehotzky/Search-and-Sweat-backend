@@ -24136,3 +24136,1761 @@ Processing by Api::V1::FitnessClassesController#index as */*
 Completed 200 OK in 38ms (Views: 32.8ms | ActiveRecord: 5.5ms)
 
 
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 10:45:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/admins"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 10:48:28 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (8.3ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mStudio Load (0.6ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 34]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 166], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.6ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 34]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.4ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.2ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 35]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 166], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 165], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 35]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.4ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Studio Load (0.0ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 36]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 165], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 36]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.2ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 37]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 161], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 168], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 170], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 37]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.1ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (103.31ms)
+Completed 200 OK in 148ms (Views: 84.1ms | ActiveRecord: 57.1ms)
+
+
+Started POST "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 10:48:36 -0500
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for Api::V1::FitnessClassesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 10:48:49 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/admins"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 10:49:07 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 33ms (Views: 20.4ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 10:49:35 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:24:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 10:51:45 -0500
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:24:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 10:51:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/admins"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 10:53:55 -0500
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:24:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 10:54:39 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:24:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:02:51 -0500
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:22:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:05:00 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+
+   “name” : “Erica”,
+
+   “email” : “Lehotzky.Erica@gmail.com”,
+
+   “password” : “password”
+
+ }
+  
+ActionDispatch::Http::Parameters::ParseError (822: unexpected token at '{
+
+   “name” : “Erica”,
+
+   “email” : “Lehotzky.Erica@gmail.com”,
+
+   “password” : “password”
+
+ }'):
+  
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:05:35 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:22:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:05:37 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:22:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:07:00 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:22:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:07:37 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:22:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:07:56 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica2", "email"=>"Lehotzky.2Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:22:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:08:03 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:22:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:12:25 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 11.9ms)
+
+
+  
+NoMethodError (undefined method `password_digest' for #<Admin:0x00007fe4db399a50>
+Did you mean?  password):
+  
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (245.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "search-and-sweat_development"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (236.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "search-and-sweat_test"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (580.5ms)[0m  [1m[35mCREATE DATABASE "search-and-sweat_development" ENCODING = 'unicode'[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (471.6ms)[0m  [1m[35mCREATE DATABASE "search-and-sweat_test" ENCODING = 'unicode'[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2659005285585771885)[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateAdmins (20181010194302)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010194302_create_admins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010194302"]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateStudios (20181010194326)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (23.7ms)[0m  [1m[35mCREATE TABLE "studios" ("id" bigserial primary key, "name" character varying, "street_address" character varying, "city" character varying, "zip_code" integer, "phone" character varying, "image" character varying, "website" character varying, "hours" character varying, "promos" character varying, "admin_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_e93b8e00d5"
+FOREIGN KEY ("admin_id")
+  REFERENCES "admins" ("id")
+)[0m
+  ↳ db/migrate/20181010194326_create_studios.rb:3
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_studios_on_admin_id" ON "studios"  ("admin_id")[0m
+  ↳ db/migrate/20181010194326_create_studios.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010194326"]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateFitnessClasses (20181010194401)
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (22.3ms)[0m  [1m[35mCREATE TABLE "fitness_classes" ("id" bigserial primary key, "name" character varying, "description" character varying, "image" character varying, "class_length" integer, "price" integer, "studio_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_5857198884"
+FOREIGN KEY ("studio_id")
+  REFERENCES "studios" ("id")
+)[0m
+  ↳ db/migrate/20181010194401_create_fitness_classes.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_fitness_classes_on_studio_id" ON "fitness_classes"  ("studio_id")[0m
+  ↳ db/migrate/20181010194401_create_fitness_classes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010194401"]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateClassDetails (20181010210352)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "class_details" ("id" bigserial primary key, "instructor" character varying, "time" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010210352_create_class_details.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010210352"]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateCategories (20181010225109)
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010225109_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010225109"]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateFitnessClassDetails (20181011145705)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "fitness_class_details" ("id" bigserial primary key, "fitness_class_id" bigint, "class_detail_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_ec0b8ed556"
+FOREIGN KEY ("fitness_class_id")
+  REFERENCES "fitness_classes" ("id")
+, CONSTRAINT "fk_rails_5ea2d54c03"
+FOREIGN KEY ("class_detail_id")
+  REFERENCES "class_details" ("id")
+)[0m
+  ↳ db/migrate/20181011145705_create_fitness_class_details.rb:3
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_fitness_class_details_on_fitness_class_id" ON "fitness_class_details"  ("fitness_class_id")[0m
+  ↳ db/migrate/20181011145705_create_fitness_class_details.rb:3
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_fitness_class_details_on_class_detail_id" ON "fitness_class_details"  ("class_detail_id")[0m
+  ↳ db/migrate/20181011145705_create_fitness_class_details.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181011145705"]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateFitnessClassCategories (20181011145709)
+  [1m[35m (5.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE TABLE "fitness_class_categories" ("id" bigserial primary key, "fitness_class_id" bigint, "category_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_fe87f9d94a"
+FOREIGN KEY ("fitness_class_id")
+  REFERENCES "fitness_classes" ("id")
+, CONSTRAINT "fk_rails_2279b474ce"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  ↳ db/migrate/20181011145709_create_fitness_class_categories.rb:3
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE  INDEX  "index_fitness_class_categories_on_fitness_class_id" ON "fitness_class_categories"  ("fitness_class_id")[0m
+  ↳ db/migrate/20181011145709_create_fitness_class_categories.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_fitness_class_categories_on_category_id" ON "fitness_class_categories"  ("category_id")[0m
+  ↳ db/migrate/20181011145709_create_fitness_class_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181011145709"]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-17 16:14:44.810367"], ["updated_at", "2018-10-17 16:14:44.810367"]]
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2659005285585771885)[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mFitnessClassCategory Load (1.0ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories"[0m
+  ↳ db/seeds.rb:3
+  [1m[36mFitnessClassDetail Load (0.6ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details"[0m
+  ↳ db/seeds.rb:4
+  [1m[36mFitnessClass Load (0.8ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ db/seeds.rb:5
+  [1m[36mClassDetail Load (0.7ms)[0m  [1m[34mSELECT "class_details".* FROM "class_details"[0m
+  ↳ db/seeds.rb:6
+  [1m[36mStudio Load (0.5ms)[0m  [1m[34mSELECT "studios".* FROM "studios"[0m
+  ↳ db/seeds.rb:7
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mAdmin Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mAdmin Create (1.1ms)[0m  [1m[32mINSERT INTO "admins" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Admin"], ["email", "Lehotzky.Erica@gmail.com"], ["password_digest", "$2a$10$sG3qUFQri/u/xu4KmB7Dp.x.S4byjmvCnnJMdCIT.kyEiPcv0sSYC"], ["created_at", "2018-10-17 16:14:48.470591"], ["updated_at", "2018-10-17 16:14:48.470591"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mStudio Create (1.6ms)[0m  [1m[32mINSERT INTO "studios" ("name", "street_address", "city", "zip_code", "phone", "website", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Body Rock Pilates - Rice Military"], ["street_address", "5230 Center St"], ["city", "Houston"], ["zip_code", 77007], ["phone", "346-319-5975"], ["website", "http://www.http://bodyrockpilates.com/"], ["admin_id", 1], ["created_at", "2018-10-17 16:14:48.491578"], ["updated_at", "2018-10-17 16:14:48.491578"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mStudio Create (0.5ms)[0m  [1m[32mINSERT INTO "studios" ("name", "street_address", "city", "zip_code", "phone", "website", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Urban Jungle Self Defense"], ["street_address", "707 Yale St"], ["city", "Houston"], ["zip_code", 77007], ["phone", "713-861-7252"], ["website", "https://www.urbanjungleselfdefense.com/"], ["admin_id", 1], ["created_at", "2018-10-17 16:14:48.495694"], ["updated_at", "2018-10-17 16:14:48.495694"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mStudio Create (0.5ms)[0m  [1m[32mINSERT INTO "studios" ("name", "street_address", "city", "zip_code", "phone", "website", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Studio Fitness EADO"], ["street_address", "1005 Ennis"], ["city", "Houston"], ["zip_code", 77003], ["phone", "346-204-4865"], ["website", "https://www.studiofitness.org/eado/"], ["admin_id", 1], ["created_at", "2018-10-17 16:14:48.498515"], ["updated_at", "2018-10-17 16:14:48.498515"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mStudio Create (0.7ms)[0m  [1m[32mINSERT INTO "studios" ("name", "street_address", "city", "zip_code", "phone", "website", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "ROW Studios"], ["street_address", "5570 Weslayan St"], ["city", "Houston"], ["zip_code", 77005], ["phone", "713-515-8553"], ["website", "https://www.rowstudios.com/"], ["admin_id", 1], ["created_at", "2018-10-17 16:14:48.501241"], ["updated_at", "2018-10-17 16:14:48.501241"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mStudio Create (0.4ms)[0m  [1m[32mINSERT INTO "studios" ("name", "street_address", "city", "zip_code", "phone", "website", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ryde - River Oaks"], ["street_address", "2005-D West Gray"], ["city", "Houston"], ["zip_code", 77019], ["phone", "832-581-2878"], ["website", "http://www.letsryde.com/"], ["admin_id", 1], ["created_at", "2018-10-17 16:14:48.504325"], ["updated_at", "2018-10-17 16:14:48.504325"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cardio"], ["created_at", "2018-10-17 16:14:48.513127"], ["updated_at", "2018-10-17 16:14:48.513127"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Spin"], ["created_at", "2018-10-17 16:14:48.515875"], ["updated_at", "2018-10-17 16:14:48.515875"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Circuit Training"], ["created_at", "2018-10-17 16:14:48.517879"], ["updated_at", "2018-10-17 16:14:48.517879"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kickboxing"], ["created_at", "2018-10-17 16:14:48.519997"], ["updated_at", "2018-10-17 16:14:48.519997"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Yoga"], ["created_at", "2018-10-17 16:14:48.522217"], ["updated_at", "2018-10-17 16:14:48.522217"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pilates"], ["created_at", "2018-10-17 16:14:48.524547"], ["updated_at", "2018-10-17 16:14:48.524547"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Boxing"], ["created_at", "2018-10-17 16:14:48.526798"], ["updated_at", "2018-10-17 16:14:48.526798"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rowing"], ["created_at", "2018-10-17 16:14:48.528924"], ["updated_at", "2018-10-17 16:14:48.528924"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Barre"], ["created_at", "2018-10-17 16:14:48.531010"], ["updated_at", "2018-10-17 16:14:48.531010"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Strength Training"], ["created_at", "2018-10-17 16:14:48.533434"], ["updated_at", "2018-10-17 16:14:48.533434"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mStudio Load (0.4ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mFitnessClass Create (0.9ms)[0m  [1m[32mINSERT INTO "fitness_classes" ("name", "description", "class_length", "price", "studio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Reformer"], ["description", "More than just your standard pilates class, our Reformer sessions will take your body to a new level. Traditional Pilates form is coupled with high-intensity exercises that will lengthen, define and reshape your muscles. Add fun, pumping music, custom-made Reformers and our knowledgeable team of instructors-- Let the addiction begin!"], ["class_length", 50], ["price", 30], ["studio_id", 1], ["created_at", "2018-10-17 16:14:48.551886"], ["updated_at", "2018-10-17 16:14:48.551886"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mStudio Load (0.4ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mFitnessClass Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_classes" ("name", "description", "class_length", "price", "studio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Facet Seven Method"], ["description", "The Facet Seven Method class takes the best training models in the fitness industry and combines it into an easy-to-follow, 1-hour program combining Strength, Interval Training, and Yoga. With an emphasis on injury free progress, we tailor the program to match you where you're at on your journey. Each class is designed to build throughout the year for those that are committed, while still providing such a well rounded program that even a quick drop in can provide great benefits. Check us out next to the turf at Studio Fitness."], ["class_length", 60], ["price", 15], ["studio_id", 3], ["created_at", "2018-10-17 16:14:48.556601"], ["updated_at", "2018-10-17 16:14:48.556601"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mStudio Load (0.4ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mFitnessClass Create (0.8ms)[0m  [1m[32mINSERT INTO "fitness_classes" ("name", "description", "class_length", "price", "studio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Power Flow Yoga"], ["description", "This yoga class combines a series of poses that flow from one to another linked by your breath (vinyasa). This is a vigorous workout that gets your body moving, blood pumping, sweat pouring, and stress releasing. This is typically a mixed-level class, so modifications will be shown. Some Yoga experience helpful. This class also features some hands-on assists so the students can better align their bodies and feel what the poses present in their bodies. Get ready for a physical workout followed by a restful savasana."], ["class_length", 60], ["price", 15], ["studio_id", 3], ["created_at", "2018-10-17 16:14:48.561180"], ["updated_at", "2018-10-17 16:14:48.561180"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mStudio Load (0.4ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mFitnessClass Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_classes" ("name", "description", "class_length", "price", "studio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "All Body"], ["description", "Our signature class! Enjoy a 50-minute high intensity interval training (H.I.I.T.) workout that incorporates rowing, free weights, calisthenics, and sweat.\nIn this class format, expect:\n\n- 5 minutes of warm-up on the rowing machine (The 'erg')\n- 5 minutes of dynamic movement to loosen up\n- 35 minutes of time-interval circuits, separated by two-minute rests\n- 5 minutes of cooldown and mobility (foam rolling/stretches)\n\nSee you on the erg!"], ["class_length", 50], ["price", 25], ["studio_id", 4], ["created_at", "2018-10-17 16:14:48.565855"], ["updated_at", "2018-10-17 16:14:48.565855"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:50
+  [1m[36mFitnessClassCategory Create (1.1ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 1], ["category_id", 6], ["created_at", "2018-10-17 16:14:48.580934"], ["updated_at", "2018-10-17 16:14:48.580934"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:51
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:51
+  [1m[36mFitnessClassCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 2], ["category_id", 10], ["created_at", "2018-10-17 16:14:48.586633"], ["updated_at", "2018-10-17 16:14:48.586633"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[36mFitnessClassCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 2], ["category_id", 6], ["created_at", "2018-10-17 16:14:48.591408"], ["updated_at", "2018-10-17 16:14:48.591408"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[36mFitnessClassCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 2], ["category_id", 5], ["created_at", "2018-10-17 16:14:48.596418"], ["updated_at", "2018-10-17 16:14:48.596418"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:54
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:54
+  [1m[36mFitnessClassCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 3], ["category_id", 5], ["created_at", "2018-10-17 16:14:48.601269"], ["updated_at", "2018-10-17 16:14:48.601269"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:55
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[36mFitnessClassCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 4], ["category_id", 1], ["created_at", "2018-10-17 16:14:48.607132"], ["updated_at", "2018-10-17 16:14:48.607132"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:55
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mFitnessClass Load (0.2ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:56
+  [1m[36mFitnessClassCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 4], ["category_id", 8], ["created_at", "2018-10-17 16:14:48.613646"], ["updated_at", "2018-10-17 16:14:48.613646"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mFitnessClass Load (0.3ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[36mFitnessClassCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "fitness_class_categories" ("fitness_class_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 4], ["category_id", 10], ["created_at", "2018-10-17 16:14:48.619217"], ["updated_at", "2018-10-17 16:14:48.619217"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:60
+  [1m[36mClassDetail Create (0.9ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Sara"], ["time", "2018-10-25 17:30:00"], ["created_at", "2018-10-17 16:14:48.631877"], ["updated_at", "2018-10-17 16:14:48.631877"]]
+  ↳ db/seeds.rb:60
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:61
+  [1m[36mClassDetail Create (0.5ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Sara"], ["time", "2018-10-25 18:30:00"], ["created_at", "2018-10-17 16:14:48.635214"], ["updated_at", "2018-10-17 16:14:48.635214"]]
+  ↳ db/seeds.rb:61
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:61
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mClassDetail Create (0.3ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Allison"], ["time", "2018-10-26 06:00:00"], ["created_at", "2018-10-17 16:14:48.643438"], ["updated_at", "2018-10-17 16:14:48.643438"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:63
+  [1m[36mClassDetail Create (0.3ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Layn Chess"], ["time", "2018-10-26 05:00:00"], ["created_at", "2018-10-17 16:14:48.645707"], ["updated_at", "2018-10-17 16:14:48.645707"]]
+  ↳ db/seeds.rb:63
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:63
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:64
+  [1m[36mClassDetail Create (0.3ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Gavin Bruce"], ["time", "2018-10-26 08:00:00"], ["created_at", "2018-10-17 16:14:48.648215"], ["updated_at", "2018-10-17 16:14:48.648215"]]
+  ↳ db/seeds.rb:64
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mClassDetail Create (0.3ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Lauren Sanches"], ["time", "2018-10-27 08:45:00"], ["created_at", "2018-10-17 16:14:48.650612"], ["updated_at", "2018-10-17 16:14:48.650612"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mClassDetail Create (0.4ms)[0m  [1m[32mINSERT INTO "class_details" ("instructor", "time", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["instructor", "Jason Kaprelian"], ["time", "2018-10-26 05:00:00"], ["created_at", "2018-10-17 16:14:48.652898"], ["updated_at", "2018-10-17 16:14:48.652898"]]
+  ↳ db/seeds.rb:66
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:70
+  [1m[36mFitnessClass Load (0.2ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:70
+  [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:70
+  [1m[36mFitnessClassDetail Create (1.2ms)[0m  [1m[32mINSERT INTO "fitness_class_details" ("fitness_class_id", "class_detail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 1], ["class_detail_id", 1], ["created_at", "2018-10-17 16:14:48.667424"], ["updated_at", "2018-10-17 16:14:48.667424"]]
+  ↳ db/seeds.rb:70
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mFitnessClass Load (0.2ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:71
+  [1m[36mFitnessClassDetail Create (0.8ms)[0m  [1m[32mINSERT INTO "fitness_class_details" ("fitness_class_id", "class_detail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 1], ["class_detail_id", 2], ["created_at", "2018-10-17 16:14:48.672571"], ["updated_at", "2018-10-17 16:14:48.672571"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:72
+  [1m[36mFitnessClass Load (0.2ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:72
+  [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:72
+  [1m[36mFitnessClassDetail Create (0.7ms)[0m  [1m[32mINSERT INTO "fitness_class_details" ("fitness_class_id", "class_detail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 1], ["class_detail_id", 3], ["created_at", "2018-10-17 16:14:48.676966"], ["updated_at", "2018-10-17 16:14:48.676966"]]
+  ↳ db/seeds.rb:72
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mFitnessClass Load (0.2ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:73
+  [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:73
+  [1m[36mFitnessClassDetail Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_class_details" ("fitness_class_id", "class_detail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 2], ["class_detail_id", 4], ["created_at", "2018-10-17 16:14:48.681283"], ["updated_at", "2018-10-17 16:14:48.681283"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:74
+  [1m[36mFitnessClass Load (0.2ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:74
+  [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:74
+  [1m[36mFitnessClassDetail Create (0.5ms)[0m  [1m[32mINSERT INTO "fitness_class_details" ("fitness_class_id", "class_detail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 2], ["class_detail_id", 5], ["created_at", "2018-10-17 16:14:48.685351"], ["updated_at", "2018-10-17 16:14:48.685351"]]
+  ↳ db/seeds.rb:74
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:74
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mFitnessClass Load (0.2ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:75
+  [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:75
+  [1m[36mFitnessClassDetail Create (0.4ms)[0m  [1m[32mINSERT INTO "fitness_class_details" ("fitness_class_id", "class_detail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 3], ["class_detail_id", 6], ["created_at", "2018-10-17 16:14:48.689128"], ["updated_at", "2018-10-17 16:14:48.689128"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:76
+  [1m[36mFitnessClass Load (0.1ms)[0m  [1m[34mSELECT  "fitness_classes".* FROM "fitness_classes" WHERE "fitness_classes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:76
+  [1m[36mClassDetail Load (0.1ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:76
+  [1m[36mFitnessClassDetail Create (0.3ms)[0m  [1m[32mINSERT INTO "fitness_class_details" ("fitness_class_id", "class_detail_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["fitness_class_id", 4], ["class_detail_id", 7], ["created_at", "2018-10-17 16:14:48.692696"], ["updated_at", "2018-10-17 16:14:48.692696"]]
+  ↳ db/seeds.rb:76
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:76
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:15:12 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 406 Not Acceptable in 799ms (Views: 6.5ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:15:27 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password_digest"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 406 Not Acceptable in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:16:37 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 4ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:16:57 -0500
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 5ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:17:22 -0500
+Processing by Api::V1::AdminsController#create as HTML
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 406 Not Acceptable in 4ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:17:48 -0500
+Processing by Api::V1::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:23:17 -0500
+Processing by Api::V1::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:26:44 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::AdminsController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.53ms)
+Completed 200 OK in 29ms (Views: 15.8ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:32:30 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/admins"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:32:51 -0500
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:33:01 -0500
+Processing by Api::V1::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 27ms (Views: 13.1ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:33:01 -0500
+Processing by Api::V1::AdminsController#index as HTML
+Processing by Api::V1::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 22ms (Views: 11.4ms | ActiveRecord: 6.5ms)
+
+
+Completed 200 OK in 22ms (Views: 9.2ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:33:56 -0500
+Processing by Api::V1::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:34:10 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:23:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:9:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:34:38 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:11
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 406 Not Acceptable in 17601ms (Views: 12.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:35:00 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 406 Not Acceptable in 24ms (Views: 5.0ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:35:43 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica1@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:9
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 5ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:36:01 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica1@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ (byebug):1
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (byebug):1
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ (byebug):1
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (byebug):1
+  [1m[35m (4.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:11
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 406 Not Acceptable in 83844ms (Views: 5.9ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 11:37:28 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica1@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+  [1m[36mAdmin Create (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Erica"], ["email", "Lehotzky.Erica1@gmail.com"], ["password_digest", "$2a$10$Jg/amAK920GHKXJ5vaax7.smNDEbc5I87nULd2kNIpoDLfRkLsLd2"], ["created_at", "2018-10-17 16:37:45.846337"], ["updated_at", "2018-10-17 16:37:45.846337"]]
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:10
+  [1m[36mAdmin Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) AND "admins"."id" != $2 LIMIT $3[0m  [["email", "Lehotzky.Erica1@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:11
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.32ms)
+Completed 201 Created in 17676ms (Views: 4.9ms | ActiveRecord: 12.8ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 13:46:29 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica1@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 100ms (Views: 3.7ms | ActiveRecord: 24.4ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 13:46:54 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica1@gmail.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/api/v1/admins_controller.rb:20:in `admin_params'
+app/controllers/api/v1/admins_controller.rb:6:in `create'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 13:47:05 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica1@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 406 Not Acceptable in 85ms (Views: 4.3ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 13:47:27 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica1@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 406 Not Acceptable in 71ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 13:48:21 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica1@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ (byebug):1
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica1@gmail.com"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (byebug):1
+  [1m[36mAdmin Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 406 Not Acceptable in 46984ms (Views: 5.5ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-17 13:49:19 -0500
+Processing by Api::V1::AdminsController#create as JSON
+  Parameters: {"name"=>"Erica", "email"=>"Lehotzky.Erica132@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", "Lehotzky.Erica132@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Create (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Erica"], ["email", "Lehotzky.Erica132@gmail.com"], ["password_digest", "$2a$10$AYDONb3xHsMxTkLYDnWwVeauRKpcYmoJcM6Bem87PoHq.PqT4W4mq"], ["created_at", "2018-10-17 18:49:20.058176"], ["updated_at", "2018-10-17 18:49:20.058176"]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) AND "admins"."id" != $2 LIMIT $3[0m  [["email", "Lehotzky.Erica132@gmail.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 201 Created in 91ms (Views: 4.2ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:05:10 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:13:in `decoded_token'
+app/controllers/application_controller.rb:25:in `current_admin'
+app/controllers/application_controller.rb:32:in `logged_in?'
+app/controllers/application_controller.rb:36:in `authorized'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:05:36 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::FitnessClassesController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:13:in `decoded_token'
+app/controllers/application_controller.rb:25:in `current_admin'
+app/controllers/application_controller.rb:32:in `logged_in?'
+app/controllers/application_controller.rb:36:in `authorized'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:06:36 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:13:in `decoded_token'
+app/controllers/application_controller.rb:25:in `current_admin'
+app/controllers/application_controller.rb:32:in `logged_in?'
+app/controllers/application_controller.rb:36:in `authorized'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:07:48 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::FitnessClassesController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:13:in `decoded_token'
+app/controllers/application_controller.rb:25:in `current_admin'
+app/controllers/application_controller.rb:32:in `logged_in?'
+app/controllers/application_controller.rb:36:in `authorized'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:09:12 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:09:30 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+Processing by Api::V1::FitnessClassesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:09:34 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:09:41 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:10:38 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/admins" for 127.0.0.1 at 2018-10-17 14:11:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/admins"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:11:18 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:13:53 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:16:15 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:16:34 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:16:36 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:17:23 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.3ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mStudio Load (0.6ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (6.9ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.6ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.5ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Studio Load (0.0ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.2ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.1ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (100.88ms)
+Completed 200 OK in 137ms (Views: 82.2ms | ActiveRecord: 43.6ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:17:45 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.4ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Studio Load (0.0ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.1ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (88.83ms)
+Completed 200 OK in 117ms (Views: 74.5ms | ActiveRecord: 31.0ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:20:14 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.5ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.2ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Studio Load (0.0ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.2ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (31.28ms)
+Completed 200 OK in 34ms (Views: 27.7ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:38:55 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.0ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mStudio Load (0.6ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.6ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.6ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.7ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Studio Load (0.0ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (35.33ms)
+Completed 200 OK in 38ms (Views: 29.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:41:28 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mStudio Load (0.5ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.4ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.4ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Studio Load (0.0ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.4ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (33.82ms)
+Completed 200 OK in 36ms (Views: 28.3ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-17 14:41:57 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (0.6ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mStudio Load (0.4ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Studio Load (0.0ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.2ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (34.06ms)
+Completed 200 OK in 36ms (Views: 29.6ms | ActiveRecord: 6.5ms)
+
+
