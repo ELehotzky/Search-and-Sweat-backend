@@ -27013,3 +27013,1248 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 13:20:32 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (17.9ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mStudio Load (8.1ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (7.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (7.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.7ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.4ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.4ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Studio Load (0.0ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.2ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (63.77ms)
+Completed 200 OK in 93ms (Views: 44.2ms | ActiveRecord: 46.3ms)
+
+
+Started GET "/form" for 127.0.0.1 at 2018-10-18 13:20:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/form"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-18 13:20:52 -0500
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "admin"=>{"email"=>""}}
+Unpermitted parameter: :admin
+  [1m[35m (18.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 406 Not Acceptable in 38ms (Views: 0.5ms | ActiveRecord: 31.4ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-18 13:20:57 -0500
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "admin"=>{"email"=>""}}
+Unpermitted parameter: :admin
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 406 Not Acceptable in 7ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-18 13:20:57 -0500
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "admin"=>{"email"=>""}}
+Unpermitted parameter: :admin
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 7ms (Views: 0.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/form" for 127.0.0.1 at 2018-10-18 13:22:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/form"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/form" for 127.0.0.1 at 2018-10-18 13:26:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/form"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 14:55:20 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (0.9ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mStudio Load (0.6ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.5ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.6ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.4ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Studio Load (0.0ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.4ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.6ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (43.44ms)
+Completed 200 OK in 46ms (Views: 36.9ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:21:39 -0500
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for Api::V1::FitnessClassesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:22:45 -0500
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for Api::V1::FitnessClassesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:31:44 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::V1::FitnessClassesController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/v1/fitness_classes_controller.rb:3:in `<class:FitnessClassesController>'
+app/controllers/api/v1/fitness_classes_controller.rb:1:in `<main>'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:32:00 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::V1::FitnessClassesController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/v1/fitness_classes_controller.rb:3:in `<class:FitnessClassesController>'
+app/controllers/api/v1/fitness_classes_controller.rb:1:in `<main>'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:32:02 -0500
+  
+ActionController::RoutingError (undefined method `respond_to' for Api::V1::FitnessClassesController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/api/v1/fitness_classes_controller.rb:3:in `<class:FitnessClassesController>'
+app/controllers/api/v1/fitness_classes_controller.rb:1:in `<main>'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:32:24 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `respond_with' for #<Api::V1::FitnessClassesController:0x00007fbf1af0cfb8>
+Did you mean?  respond_to?):
+  
+app/controllers/api/v1/fitness_classes_controller.rb:6:in `index'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:36:56 -0500
+Processing by Api::V1::FitnessClassesController#index as HTML
+  [1m[36mFitnessClass Load (1.1ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mStudio Load (0.4ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.5ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.5ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.4ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.3ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.5ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Studio Load (0.0ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.3ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.4ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (102.94ms)
+Completed 200 OK in 167ms (Views: 86.4ms | ActiveRecord: 74.1ms)
+
+
+Started POST "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:37:10 -0500
+Processing by Api::V1::FitnessClassesController#create as JSON
+  Parameters: {"name"=>"test", "description"=>"test", "price"=>"", "class_length"=>"", "time"=>"", "categories"=>["strength_training"], "fitness_class"=>{"name"=>"test", "description"=>"test", "class_length"=>"", "price"=>""}}
+Unpermitted parameters: :time, :categories, :fitness_class
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/fitness_classes_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/fitness_classes_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 406 Not Acceptable in 11ms (Views: 6.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:38:43 -0500
+Processing by Api::V1::FitnessClassesController#create as */*
+  Parameters: {"name"=>"new class", "description"=>"descript", "price"=>"20", "class_length"=>"50", "time"=>"", "categories"=>["cardio"], "fitness_class"=>{"name"=>"new class", "description"=>"descript", "class_length"=>"50", "price"=>"20"}}
+Unpermitted parameters: :time, :categories, :fitness_class
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/fitness_classes_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/fitness_classes_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 5ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:50:29 -0500
+Processing by Api::V1::FitnessClassesController#create as */*
+  Parameters: {"name"=>"new class", "description"=>"descript", "price"=>"20", "class_length"=>"50", "time"=>"", "categories"=>["cardio"], "fitness_class"=>{"name"=>"new class", "description"=>"descript", "class_length"=>"50", "price"=>"20"}}
+Unpermitted parameters: :time, :categories, :fitness_class
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/fitness_classes_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/fitness_classes_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 406 Not Acceptable in 5ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:50:58 -0500
+Processing by Api::V1::FitnessClassesController#create as */*
+  Parameters: {"name"=>"new class", "description"=>"descript", "price"=>"20", "class_length"=>"50", "time"=>"", "categories"=>["cardio"], "fitness_class"=>{"name"=>"new class", "description"=>"descript", "class_length"=>"50", "price"=>"20"}}
+Unpermitted parameters: :time, :categories, :fitness_class
+Unpermitted parameters: :time, :categories, :fitness_class
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ (byebug):1
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (byebug):1
+Completed 500 Internal Server Error in 101032ms (ActiveRecord: 11.0ms)
+
+
+  
+Started GET "/form" for 127.0.0.1 at 2018-10-18 15:52:39 -0500
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/fitness_classes_controller.rb:10:in `create'
+  
+ActionController::RoutingError (No route matches [GET] "/form"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/form" for 127.0.0.1 at 2018-10-18 15:53:12 -0500
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/rack-cors-1.0.2/lib/rack/cors.rb:97
+  
+ActionController::RoutingError (No route matches [GET] "/form"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/fitness_classes" for 127.0.0.1 at 2018-10-18 15:53:17 -0500
+Processing by Api::V1::FitnessClassesController#index as */*
+  [1m[36mFitnessClass Load (1.0ms)[0m  [1m[34mSELECT "fitness_classes".* FROM "fitness_classes"[0m
+  ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer/collection_serializer.rb:71
+[active_model_serializers]   [1m[36mStudio Load (0.5ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.6ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.5ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.4ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.2ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 2]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mClassDetail Load (0.4ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mCACHE Studio Load (0.0ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 3]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.2ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers]   [1m[36mStudio Load (0.2ms)[0m  [1m[34mSELECT  "studios".* FROM "studios" WHERE "studios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/erica/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.7/lib/active_model/serializer.rb:381
+[active_model_serializers]   [1m[36mFitnessClassCategory Load (0.2ms)[0m  [1m[34mSELECT "fitness_class_categories".* FROM "fitness_class_categories" WHERE "fitness_class_categories"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:6
+[active_model_serializers]   [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:7
+[active_model_serializers]   [1m[36mFitnessClassDetail Load (0.3ms)[0m  [1m[34mSELECT "fitness_class_details".* FROM "fitness_class_details" WHERE "fitness_class_details"."fitness_class_id" = $1[0m  [["fitness_class_id", 4]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:13
+[active_model_serializers]   [1m[36mClassDetail Load (0.1ms)[0m  [1m[34mSELECT  "class_details".* FROM "class_details" WHERE "class_details"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/fitness_class_serializer.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (114.78ms)
+Completed 200 OK in 160ms (Views: 110.2ms | ActiveRecord: 37.6ms)
+
+
+Started GET "/form" for 127.0.0.1 at 2018-10-18 15:53:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/form"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:07:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:07:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-18 16:07:53 -0500
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "admin"=>{"email"=>""}}
+Unpermitted parameter: :admin
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 199ms (Views: 4.6ms | ActiveRecord: 9.9ms)
+
+
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-18 16:33:07 -0500
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"email"=>"", "password"=>"[FILTERED]", "admin"=>{"email"=>""}}
+Unpermitted parameter: :admin
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE LOWER("admins"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 9ms (Views: 0.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:41:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:41:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:41:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:42:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:42:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/v1/admins" for 127.0.0.1 at 2018-10-18 16:43:19 -0500
+Processing by Api::V1::AdminsController#create as */*
+  Parameters: {"admin"=>{}}
+Unpermitted parameter: :admin
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/admins_controller.rb:6
+  [1m[36mAdmin Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/admins_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 6ms (Views: 0.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:44:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:46:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:46:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:47:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:47:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:48:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:48:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:49:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:49:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:50:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:50:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:50:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:50:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:51:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-10-18 16:51:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
