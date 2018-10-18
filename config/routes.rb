@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 			resources :fitness_classes
 			resources :admins, only: [:create]
 				post "/login", to: "auth#create"
-				get "/profile", to: "admins#profile"
+				get "/form", to: "admins#form"
 			resources :studios
 			resources :fitness_class_details
 		end

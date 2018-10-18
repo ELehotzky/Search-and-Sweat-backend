@@ -1,6 +1,6 @@
 class Api::V1::AdminsController < ApplicationController
 
-	skip_before_action :authorized, only: [:create]
+	skip_before_action only: [:create]
 
 	def create
 		@admin = Admin.create(admin_params)
@@ -12,6 +12,9 @@ class Api::V1::AdminsController < ApplicationController
 		end
 	end
 
+	def profile
+		render json: current_admin
+	end
 
 
 	private 
