@@ -1,6 +1,6 @@
 class Api::V1::AuthController < ApplicationController
 
-	skip_before_action :authorized, only: [:create]
+	# skip_before_action :authorized, only: [:create]
 
 	def create
 		@admin = Admin.find_by(email: admin_login_params[:email])
@@ -15,7 +15,7 @@ class Api::V1::AuthController < ApplicationController
 	private
 
 	def admin_login_params
-		params.require(:admin).permit(:email, :password)
+		params.require(:auth).permit(:email, :password)
 	end
 
 end
