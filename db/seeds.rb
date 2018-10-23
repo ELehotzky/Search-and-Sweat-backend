@@ -10,7 +10,12 @@ Category.destroy_all
 
 
 #Admins
-admin = Admin.create(name: "Admin", email: "Lehotzky.Erica@gmail.com", password: "pass1234")
+admin1 = Admin.create(name: "Body Rock Rice", email: "gym1@gmail.com", password: "password")
+admin2 = Admin.create(name: "Urban Jungle", email: "gym2@gmail.com", password: "password")
+admin3 = Admin.create(name: "Studio Fitness EADO", email: "gym3@gmail.com", password: "password")
+admin4 = Admin.create(name: "Row", email: "gym4@gmail.com", password: "password")
+admin5 = Admin.create(name: "Ryde - River Oaks", email: "gym5@gmail.com", password: "password")
+
 
 #Studios
 body_rock_rice = Studio.create(name: "Body Rock Pilates - Rice Military", street_address: "5230 Center St", city: "Houston", zip_code: 77007, phone: "346-319-5975", website: "http://www.http://bodyrockpilates.com/", admin: admin)
