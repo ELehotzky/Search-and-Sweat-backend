@@ -14,6 +14,7 @@ class Api::V1::AdminsController < ApplicationController
 	end
 
 	def profile
+		# byebug
 		if current_admin
 			render json: current_admin
 		else

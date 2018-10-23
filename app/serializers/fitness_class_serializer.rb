@@ -1,6 +1,7 @@
 class FitnessClassSerializer < ActiveModel::Serializer
 
-	attributes :id, :name, :description, :image, :class_length, :price, :studio, :fitness_class_categories, :fitness_class_details
+	attributes :id, :name, :description, :image, :class_length, :price, :fitness_class_categories, :fitness_class_details
+	belongs_to :studio
 
 	def fitness_class_categories
 		self.object.fitness_class_categories.map do |cat| {
