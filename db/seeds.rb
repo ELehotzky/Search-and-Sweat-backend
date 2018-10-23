@@ -18,11 +18,11 @@ admin5 = Admin.create(name: "Ryde - River Oaks", email: "gym5@gmail.com", passwo
 
 
 #Studios
-body_rock_rice = Studio.create(name: "Body Rock Pilates - Rice Military", street_address: "5230 Center St", city: "Houston", zip_code: 77007, phone: "346-319-5975", website: "http://www.http://bodyrockpilates.com/", admin: admin)
-urban_jungle = Studio.create(name: "Urban Jungle Self Defense", street_address: "707 Yale St", city: "Houston", zip_code: 77007, phone: "713-861-7252", website: "https://www.urbanjungleselfdefense.com/", admin: admin)
-studio_fitness_eado = Studio.create(name: "Studio Fitness EADO", street_address: "1005 Ennis", city: "Houston", zip_code: 77003, phone: "346-204-4865", website: "https://www.studiofitness.org/eado/", admin: admin)
-row = Studio.create(name: "ROW Studios", street_address: "5570 Weslayan St", city: "Houston", zip_code: 77005, phone: "713-515-8553", website: "https://www.rowstudios.com/", admin: admin)
-ryde_river_oaks = Studio.create(name: "Ryde - River Oaks", street_address: "2005-D West Gray", city: "Houston", zip_code: 77019, phone: "832-581-2878", website: "http://www.letsryde.com/", admin: admin)
+body_rock_rice = Studio.create(name: "Body Rock Pilates - Rice Military", street_address: "5230 Center St", city: "Houston", zip_code: 77007, phone: "346-319-5975", website: "http://www.http://bodyrockpilates.com/", admin: admin1)
+urban_jungle = Studio.create(name: "Urban Jungle Self Defense", street_address: "707 Yale St", city: "Houston", zip_code: 77007, phone: "713-861-7252", website: "https://www.urbanjungleselfdefense.com/", admin: admin2)
+studio_fitness_eado = Studio.create(name: "Studio Fitness EADO", street_address: "1005 Ennis", city: "Houston", zip_code: 77003, phone: "346-204-4865", website: "https://www.studiofitness.org/eado/", admin: admin3)
+row = Studio.create(name: "ROW Studios", street_address: "5570 Weslayan St", city: "Houston", zip_code: 77005, phone: "713-515-8553", website: "https://www.rowstudios.com/", admin: admin4)
+ryde_river_oaks = Studio.create(name: "Ryde - River Oaks", street_address: "2005-D West Gray", city: "Houston", zip_code: 77019, phone: "832-581-2878", website: "http://www.letsryde.com/", admin: admin5)
 
 #Categories
 cardio = Category.create(name: "Cardio")
